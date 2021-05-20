@@ -451,10 +451,10 @@
                                 let img = document.querySelector(
                                     `.bannerScroll [data-lg-id="${target.dataset.id}"]`
                                 );
-                                console.log(img);
                                 toDataURL(
                                     img.dataset.src,
                                     function (f) {
+                                        console.log(f);
                                         if (navigator.canShare && navigator.canShare({
                                                 files: f
                                             })) {
