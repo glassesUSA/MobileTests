@@ -459,7 +459,7 @@
                                                 f
                                             )) {
                                             navigator.share({
-                                                    files: f,
+                                                    files: [f],
                                                     title: 'Pictures',
                                                     text: 'Our Pictures.',
                                                 })
@@ -499,7 +499,7 @@
                 canvas.width = this.naturalWidth;
                 ctx.drawImage(this, 0, 0);
                 dataURL = canvas.toDataURL();
-                dataURL = dataURLtoFile(dataURL, 'hello.txt');
+                dataURL = dataURLtoFile(dataURL, 'hello.png');
                 callback(dataURL);
             };
             img.src = src;
